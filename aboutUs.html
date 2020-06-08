@@ -1,0 +1,141 @@
+<!--<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="ISO-8859-1"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>About us | Flight Reservation System</title>
+ <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="utf-8">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="newstyle.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	 <style>
+	 .newContainer{
+	 	width:1500px;
+	 	margin-left:auto;
+	 	margin-right:auto;
+	 }
+
+   .icon {
+    color: #051d30;
+   }
+	 </style>
+</head>
+<body>
+  <nav class="navbar navbar-light fixed-top navbar-expand-md bg-faded justify-content-center">
+        <a href="index.html" class="navbar-brand d-flex w-50 mr-auto nav-link"><i class="fa fa-plane"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <ul class="navbar-nav w-100 justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="border-right: 1px solid #e5e5e5;">Flights</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="border-right: 1px solid #e5e5e5;">Booking history</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactUs.html">Contact</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+              <li class="nav-item" style="border-right: 1px solid #e5e5e5;">
+                <a href="settings.html" class="nav-link" id="search"> Settings</a>
+            </li>
+            <li class="nav-item">
+                <a href="login.html" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    
+<centre>    
+<div class="page text-center">
+ <section class="section-80 section-lg-120">
+        <div class="newContainer">
+          <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <table class="sm-leading-32" style="line-height: 28px; font-size: 14px;" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <div style="background-color: #edf2f7; height: 2px; line-height: 2px;">&zwnj;</div>
+          <tr>
+            <td class="sm-inline-block" style="color: #718096;" width="50%">Booking Id</td>
+            <td class="sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" >{{book_id}}</td>
+          </tr>
+          <tr>
+            <td class="sm-inline-block" style="color: #718096;" width="50%">Booked By</td>
+            <td class="sm-inline-block" style="font-weight: 600; text-align: right;" width="50%">{{userName}}</td>
+          </tr>
+         
+          <tr>
+              <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Hotel</td>
+              <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" >{{hotelName}}</td>
+            </tr>
+          <tr>
+            <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Address</td>
+            <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" >{{address}}</td>
+          </tr>
+          <tr>
+            <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Room Type</td>
+            <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" >{{type}}</td>
+          </tr>
+          <tr>
+            <td class="sm-w-1-4 sm-inline-block" style="color: #718096;" width="50%">Hotel Contact</td>
+            <td class="sm-w-3-4 sm-inline-block" style="font-weight: 600; text-align: right;" width="50%" >{{phone}}</td>
+          </tr>
+        </table>
+        <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+        <a href="#" class="btn btn-primary">Cancel booking</a>
+      </div>
+    </div>
+    </div>
+  </section>
+</div>
+</centre>
+         <!-- <h5 class="">Why People Choose Us</h5>
+          <h2 class="">Our Advantages</h2>
+          <hr class="">
+          <div class="row row-50">
+            <div class=""><span class="icon icon-lg fa-plane"></span>
+              <h5 class="text-bold">The Most Reliable<br class="d-none d-lg-block">Airlines</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-right-40">We cooperate only with the most reliable<br> airlines who can boast the perfect reputation.</p>
+            </div>
+            <div class=""><span class="icon icon-lg fa-user"></span>
+              <h5 class="text-bold">More Than 7M Visitors<br class="d-none d-lg-block">Each Month</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">More than 7 million people use our<br> services to find and book airline tickets.</p>
+            </div>
+             <div class=""><span class="icon icon-lg fa-plane"></span>
+              <h5 class="text-bold">User-Friendly<br class="d-none d-lg-block">Search System</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-right-40">We cooperate only with the most reliable<br> airlines who can boast the perfect reputation.</p>
+            </div>
+            <div class=""><span class="icon icon-lg fa-user"></span>
+              <h5 class="text-bold">More Than 7M Visitors<br class="d-none d-lg-block">Each Month</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">More than 7 million people use our<br> services to find and book airline tickets.</p>
+            </div> 
+            <div class=""><span class="icon icon-lg fa-search"></span>
+              <h5 class="text-bold">User-Friendly<br class="d-none d-lg-block">Search System</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">Convenient and fast search for<br> airline tickets, hotels and cars.</p>
+            </div>
+            <div class=""><span class="icon icon-lg fa-calendar" style="font-size: 52px;"></span>
+              <h5 class="text-bold">Fast and Reliable<br class="d-none d-lg-block">Ticket Booking</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">We provide reliable ticket booking system,<br> which is also perfect for first-time travellers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+</div> -->
+</body>
+</html>

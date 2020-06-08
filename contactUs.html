@@ -1,0 +1,158 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="ISO-8859-1"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>App | Contact Us</title>
+ <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,900">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light fixed-top navbar-expand-md bg-faded justify-content-center">
+    <a href="index.html" class="navbar-brand d-flex w-50 mr-auto nav-link"><i class="fa fa-plane"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+        <ul class="navbar-nav w-100 justify-content-center">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="border-right: 1px solid #e5e5e5;" >Flights</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutUs.html" style="border-right: 1px solid #e5e5e5;">Booking history</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactUs.html">Contact</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item" style="border-right: 1px solid #e5e5e5;">
+                <a href="settings.html" class="nav-link" id="search"> Settings</a>
+            </li>
+            <li class="nav-item">
+                <a href="login.html" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section class="section-top-80 section-lg-top-0 google-map-abs-section">
+        <div class="container container-wide text-lg-left">
+          <div class="row row-50 row-lg-0 justify-content-xl-between">
+            <div class="col-lg-7 col-xl-5 section-lg-80 section-xl-120">
+              <h2 class="text-ubold">Get in Touch</h2>
+              <hr class="divider divider-md-left divider-primary divider-80">
+              <p>You can contact us any way that is convenient for you. We are available 24/7 via fax or email. You can also use a quick contact form below or visit our office personally. We would be happy to answer your questions.</p>
+              <!-- RD Mailform-->
+              <form class="rd-mailform rd-form text-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <div class="row row-20">
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-name">First name</label>
+                      <input class="form-input form-input-gray" id="contact-name" type="text" name="name" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-surname">Last name</label>
+                      <input class="form-input form-input-gray" id="contact-surname" type="text" name="surname" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-email">E-mail</label>
+                      <input class="form-input form-input-gray" id="contact-email" type="email" name="email" data-constraints="@Required @Email">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-phone">Phone</label>
+                      <input class="form-input form-input-gray" id="contact-phone" type="text" name="phone" data-constraints="@Required @Integer">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-message">Message</label>
+                      <textarea class="form-input form-input-gray" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                    </div>
+                    <button class="button button-primary button-sm" style="min-width: 140px;" type="submit">Send</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--<div class="col-xxl-2 col-xl-3 col-lg-4 section-lg-80 section-xl-120">
+              <div class="row row-40 row-lg-60 text-left">
+                <div class="col-sm-6 col-lg-12">
+                  <h5 class="text-bold hr-title">Phones</h5>
+                  <div class="unit unit-spacing-xxs flex-row">
+                    <div class="unit-left"><span class="icon icon-lg text-info-dr fa-mobile-phone"></span></div>
+                    <div class="unit-body">
+                      <div><a class="text-gray" href="tel:#">1-800-1234-567,</a></div>
+                      <div><a class="text-gray" href="tel:#">1-800-9876-543</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-12">
+                  <h5 class="text-bold hr-title">E-mail</h5>
+                  <div class="unit unit-spacing-xxs flex-row">
+                    <div class="unit-left"><span class="icon icon-sm text-info-dr fa-mail-forward"></span></div>
+                    <div class="unit-body">
+                      <div><a class="text-gray" href="/cdn-cgi/l/email-protection#9ebd"><span class="__cf_email__" data-cfemail="157c7b737a557170787a797c7b7e3b7a6772">info@flyingbird.org</span></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-12">
+                  <h5 class="text-bold hr-title">Address</h5>
+                  <div class="unit unit-spacing-xxs flex-row">
+                    <div class="unit-left"><span class="icon icon-sm text-info-dr fa-location-arrow"></span></div>
+                    <div class="unit-body">
+                      <div><a class="text-gray" href="#">Wipro Limited, Plot No.2 MIDC Pune Infotech Park, MIDC Road, Phase 1, Hinjawadi, Pune, Maharashtra 411057</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-12">
+                  <h5 class="text-bold hr-title">Opening Hours</h5>
+                  <div class="unit unit-spacing-xxs flex-row">
+                    <div class="unit-left"><span class="icon icon-sm text-info-dr fa-clock-o"></span></div>
+                    <div class="unit-body">
+                      <div>Mon-Fri<br> 8:00am - 6:00pm<br>Sat 10:00am - 4:00pm<br><span style="color:red;">Sun Closed</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <h5 class="text-bold hr-title">Socials</h5>
+                  <ul class="list-inline">
+                    <li><a class="icon text-gray icon-xxs fa-facebook" href="#"></a></li>
+                    <li><a class="icon text-gray icon-xxs fa-twitter" href="#"></a></li>
+                    <li><a class="icon text-gray icon-xxs fa-pinterest" href="#"></a></li>
+                    <li><a class="icon text-gray icon-xxs fa-instagram" href="#"></a></li>
+                    <li><a class="icon text-gray icon-xxs fa-google-plus" href="#"></a></li>
+                    <li><a class="icon text-gray icon-xxs fa-rss" href="#"></a></li>
+                  </ul>
+                </div>
+              </div> 
+            </div>-->
+            <!--<div class="col-xl-3 google-map-abs">-->
+              <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
+              <!--Please note that YOUR_API_KEY should replaced with your key.-->
+              <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
+             <!-- <div class="google-map-container google-map-align" data-center="Wipro Limited, Plot No.2 MIDC Pune Infotech Park, MIDC Road, Phase 1, Hinjawadi, Pune, Maharashtra 411057" data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png">
+                <div class="google-map"></div>
+                <ul class="google-map-markers">
+                  <li data-location="Wipro Limited, Plot No.2 MIDC Pune Infotech Park, MIDC Road, Phase 1, Hinjawadi, Pune, Maharashtra 411057" data-description="Wipro Limited, Plot No.2 MIDC Pune Infotech Park, MIDC Road, Phase 1, Hinjawadi, Pune, Maharashtra 411057"></li>
+                </ul>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </section>
+</body>
+</html>

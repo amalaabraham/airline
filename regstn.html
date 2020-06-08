@@ -1,0 +1,169 @@
+<!--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Register | Flight Reservation System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/animate/animate.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/css-hamburgers/hamburgers.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/vendor/select2/select2.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v1/css/util.css">
+<link rel="stylesheet" type="text/css" href="colorlib.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+	
+	var check = function() {
+		if(document.getElementById('pass').value != '' && document.getElementById('cfrm_pass').value != ''){
+			if (document.getElementById('pass').value == document.getElementById('cfrm_pass').value) {
+			    document.getElementById('message').style.color = 'green';
+			    document.getElementById('message').innerHTML = 'Passwords matched';
+			  } else {
+			    document.getElementById('message').style.color = 'red';
+			    document.getElementById('message').innerHTML = 'Both passwords do not match!';
+			  }
+		}
+		else{
+			document.getElementById('message').innerHTML = '';
+		}	
+}
+</script>
+</head>
+<body>
+	<nav class="navbar navbar-light fixed-top navbar-expand-md bg-faded justify-content-center">
+        <a href="index.html" class="navbar-brand d-flex w-50 mr-auto nav-link"><i class="fa fa-plane"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3" style="float:right;">
+            <ul class="navbar-nav w-100 justify-content-center" style="float:right;">
+               <li class="nav-item active">
+                   <!-- <a class="nav-link" href="index.html" style="border-right: 1px solid #e5e5e5;">Flights </a>--> 
+                </li>
+                <li class="nav-item">
+                  <!--  <a class="nav-link"  href="aboutUs.html" style="border-right: 1px solid #e5e5e5;">About </a>--> 
+                </li>
+                <li class="nav-item">
+                   <!-- <a class="nav-link" href="contact.html">Contact </a>--> 
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                <li class="nav-item" style="border-right: 1px solid #e5e5e5;">
+                   <!-- <a href="#" class="nav-link" id="search"><i class="fa fa-search" aria-hidden="true"></i> Search</a>--> 
+                </li> 
+                <li class="nav-item" style="float:right;">
+                    <a href="login.html"  class="nav-link" ><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="limiter">
+<div class="container-login100" style="background-image: linear-gradient(to bottom, #4b789d, #395f80, #274864, #163249, #051d30);">
+<div  style="width:560px; padding:100px 95px 90px 130px" class="wrap-login100">
+<form method="post" action="login.html" class="login100-form validate-form">
+<span class="login100-form-title">
+Member Registration
+</span>
+<c:if test='${not empty requestScope.success_res }'>
+	<p style="color:red;"><c:out value='${success_res}'></c:out></p>
+</c:if>
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input class="input100" type="text" name="firstname" placeholder="First Name" required>
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-user" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input class="input100" type="text" name="lastname" placeholder="Last Name">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-user" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input class="input100" type="email" name="emailid" placeholder="Email">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input class="input100" type="text" name="phone" pattern="[0-9]{10}" placeholder="Phone No.">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-phone" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input class="input100" type="text" name="govid" placeholder="Address">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-address-card" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input class="input100" type="text" name="govid" placeholder="Govt. ID">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Password is required">
+<input class="input100" type="password" name="rpass" id="pass" placeholder="Password" onkeyup='check();'>
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-lock" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Password not matched">
+<input class="input100" type="password" name="rcfrm_pass" id="cfrm_pass" placeholder="Confirm Password" onkeyup='check();'>
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-lock" aria-hidden="true"></i>
+</span>
+</div>
+<div>
+<span id="message"></span>
+</div>
+<div class="container-login100-form-btn">
+<input class="regstn-form-btn" type="submit" value="Register"> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;   
+<input class="regstn-form-btn" type="reset" value="Reset">
+</div>
+</form>
+</div>
+</div>
+</div>
+<!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="section-bg">
+    <div class="container">
+      <div class="copyright">
+        <strong>Flight Reservation System</strong> &copy;2020
+      </div>
+      <div class="credits">
+        <a href="index.html">Flights</a> | <a href="about.html">About us</a> | <a href="applications.html">Contact us</a>
+      </div>
+      <div class="credits">
+        Designed & Developed by <strong>ABC</strong>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+<script src="https://colorlib.com/etc/lf/Login_v1/js/main.js" type="30e2262c94bffae5df15a296-text/javascript"></script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="30e2262c94bffae5df15a296-|49" defer=""></script>
+</body>
+</html>
